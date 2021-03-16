@@ -1,0 +1,48 @@
+.container-week-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper-week-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 15em;
+  width: 7em;
+  position: relative;
+  margin: 20px;
+  color: aliceblue;
+  font-size: 1.2em;
+}
+.wrapper-week-day:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.box-1 {
+  position: absolute;
+  top: 2px;
+}
+
+.box-3 {
+  position: absolute;
+  bottom: 25px;
+}
+.box-4 {
+  position: absolute;
+  bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

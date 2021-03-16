@@ -1,0 +1,11 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  font-size: 1.5em;
+}
+
+form > input {
+  margin: 3px;
+}
