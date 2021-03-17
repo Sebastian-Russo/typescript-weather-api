@@ -2,8 +2,13 @@ import React, { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../styling/weather-input.css';
 
-type WeatherInputProps = {
-  fetchData: (obj: Location) => void;
+type Location = {
+  state: string;
+  city: string;
+}
+
+type WeatherInputProps = { // async returns a Promise 
+  fetchData: (obj: Location) => Promise<void>;
 }
 
 export const WeatherInput: React.FC<WeatherInputProps> = ({fetchData}) => {
@@ -11,7 +16,7 @@ export const WeatherInput: React.FC<WeatherInputProps> = ({fetchData}) => {
   const history = useHistory();
   
   // FormEvent (event handle type), <HTMLButtonElement> restrict to specific element (generic)
-  const handleSubmit = (e: FormEvent<HTMLButtonElement>): void => {
+  const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     console.log(input)
     let words: string | string[] = input.replace(',', '')

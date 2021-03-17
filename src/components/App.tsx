@@ -15,8 +15,6 @@ const App: React.FC = () => {
   const [day, setDay] = useState<string[]>([]);
   const [items, setItems] = useState<string[]>([]);
 
-
-  // openweathermap 
   const fetchData = async (location: Location) => {
     const API_URL = 'https://api.openweathermap.org/data/2.5/forecast';
     const API_KEY = process.env.REACT_APP_API_KEY;
